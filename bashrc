@@ -28,12 +28,24 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
-
-#Type directory name to cd into it
+# Type directory name to cd into it
 shopt -s autocd
+
+# Make tab completion case-insensitive:
+bind 'set completion-ignore-case on'
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob;
+
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell;
+
+# Autocorrect on directory names to match a glob.
+shopt -s dirspell 2> /dev/null
+
+# Turn on recursive globbing (enables ** to recurse all directories)
+shopt -s globstar 2> /dev/null
+
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -215,8 +227,6 @@ elif [ "$HOSTNAME" == "sebPC" ]; then
 
   alias root='root -l'
 
-  . $HOME/Programme/torch/install/bin/torch-activate
-
 elif [ "$HOSTNAME" == "smiRR-GPU" ]; then
   if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -247,17 +257,5 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-
-# Better cd'ing
-# Make tab completion case-insensitive:
-bind 'set completion-ignore-case on'
-# Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob;
-# Correct spelling errors in arguments supplied to cd
-shopt -s cdspell;
-# Autocorrect on directory names to match a glob.
-shopt -s dirspell 2> /dev/null
-# Turn on recursive globbing (enables ** to recurse all directories)
-shopt -s globstar 2> /dev/null
-
+    
 # echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # | grep '(1)'
