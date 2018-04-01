@@ -17,7 +17,7 @@ alias md='mkdir -p'
 alias rm='echo "This is not the command you are looking for. Use trash-put instead."; false'
     
 alias CP='rsync -ah --progress'
-alias RMTEMP='\rm -v *~'
+alias RMTEMP='\rm -v *~ .*~'
 
 alias NUMFILES='find . -type f | wc -l' # return number of files in current folder
 
