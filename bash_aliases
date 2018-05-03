@@ -56,6 +56,7 @@ alias q='exit'
 
 ## PYTHON
 
+alias per='pipenv run'    
 alias unittest='python -m unittest discover'
 alias currentenv='echo "Active virtual environment: "$VIRTUAL_ENV'
 
