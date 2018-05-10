@@ -215,6 +215,7 @@ Plug 'tpope/vim-commentary'
 Plug 'luochen1990/rainbow'
 Plug 'Valloric/YouCompleteMe' "needs to be compiled!
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'shime/vim-livedown'
 call plug#end()
 
 """ rainbow
@@ -225,6 +226,15 @@ let g:rainbow_active = 1
 set updatetime=1000
 "let g:gitgutter_highlight_lines=1
 
+""" Livedown
+" should markdown preview get shown automatically upon opening markdown buffer
+let g:livedown_autorun = 0
+" should the browser window pop-up upon previewing
+let g:livedown_open = 1 
+" the port on which Livedown server will run
+let g:livedown_port = 1337
+" the browser to use
+let g:livedown_browser = "firefox"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 "7. Functions                                          "
