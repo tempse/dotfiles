@@ -63,6 +63,10 @@ endif
 let &undodir=s:undoDir
 set undofile
 
+"Use dracula color theme
+syntax on
+color dracula
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 "1. Mouse and clipboard settings                       "
@@ -207,6 +211,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'luochen1990/rainbow'
 Plug 'Valloric/YouCompleteMe' "needs to be compiled!
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 """ rainbow
