@@ -148,6 +148,9 @@ autocmd FileType * set formatoptions -=cro
 "4. Search options                                     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"Set ignore case
+set ic
+
 "Highlight all matches when searching
 set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
