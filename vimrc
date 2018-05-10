@@ -212,6 +212,11 @@ call plug#end()
 """ rainbow
 let g:rainbow_active = 1
 
+""" GitGutter
+"Decrease time between updates (done for GitGutter) (default 4000, i.e. 4 seconds)
+set updatetime=1000
+"let g:gitgutter_highlight_lines=1
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 "7. Functions                                          "
