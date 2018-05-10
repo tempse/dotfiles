@@ -206,7 +206,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'luochen1990/rainbow'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe' "needs to be compiled!
 call plug#end()
 
 """ rainbow
