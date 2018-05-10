@@ -216,6 +216,7 @@ Plug 'luochen1990/rainbow'
 Plug 'Valloric/YouCompleteMe' "needs to be compiled!
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'shime/vim-livedown'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 """ rainbow
@@ -235,6 +236,15 @@ let g:livedown_open = 1
 let g:livedown_port = 1337
 " the browser to use
 let g:livedown_browser = "firefox"
+
+""" EasyMotion
+let g:EasyMotion_do_mapping = 0
+map <SPACE>w <Plug>(easymotion-w)
+map <SPACE>b <Plug>(easymotion-b)
+map <SPACE>s <Plug>(easymotion-s2)
+map <SPACE>j <Plug>(easymotion-j)
+map <SPACE>k <Plug>(easymotion-k)
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 "7. Functions                                          "
