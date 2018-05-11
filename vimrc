@@ -214,6 +214,7 @@ set statusline+=\%l:%c
 
 call plug#begin('~/.vim/plugged/')
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'luochen1990/rainbow'
