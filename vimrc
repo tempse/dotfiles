@@ -125,11 +125,11 @@ noremap <C-l> <C-W><C-l>
 set nu
 set rnu
 "Show existing tab with 2 spaces width
-set tabstop=2
+set tabstop=4
 "When indenting with '>', use 2 spaces width
-set shiftwidth=2
+set shiftwidth=4
 "How many spaces are used in insert mode
-set softtabstop=2
+set softtabstop=4
 "Maintain indent from current line to next line
 set autoindent
 "Wrapped lines follow indentation
