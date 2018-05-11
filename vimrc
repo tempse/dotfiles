@@ -144,7 +144,7 @@ set textwidth =80
 set fileformat=unix
 "Underline the current line
 "set cursorline
-"Dsiable comment autowrapping, auto insertion of comment leader
+"Disable comment autowrapping, auto insertion of comment leader
 autocmd FileType * set formatoptions -=cro
 
 
@@ -222,6 +222,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'shime/vim-livedown'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/syntastic'
+Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
 """ rainbow
@@ -259,6 +260,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+""" Vim Indent Guides
+map <leader>i :IndentGuidesToggle<CR>
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=darkgrey
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
