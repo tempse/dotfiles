@@ -112,6 +112,10 @@ nnoremap L $
 noremap <C-J> :bnext<CR>
 noremap <C-K> :bprev<CR>
 
+"Shortcuts to switch through errors (displayed by Syntastic)
+nnoremap <C-PageDown> :lnext<CR>
+nnoremap <C-PageUp> :lprev<CR>
+
 ""Switch between open windows
 noremap <C-h> <C-W><C-h>
 noremap <C-l> <C-W><C-l>
@@ -217,6 +221,7 @@ Plug 'Valloric/YouCompleteMe' "needs to be compiled!
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'shime/vim-livedown'
 Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/syntastic'
 call plug#end()
 
 """ rainbow
@@ -244,6 +249,16 @@ map <SPACE>b <Plug>(easymotion-b)
 map <SPACE>s <Plug>(easymotion-s2)
 map <SPACE>j <Plug>(easymotion-j)
 map <SPACE>k <Plug>(easymotion-k)
+
+""" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
