@@ -28,7 +28,7 @@ echo "done"
 # directory specified in $files
 echo "Moving any existing dotfiles to $olddir"
 for file in $files; do
-    if [ "$file" == "zathurarc" ]; then
+	if [ "$file" == "zathurarc" ]; then
 		mv -v ~/.config/zathura/zathurarc $olddir
 		echo "Creating symlink to $file in home directory."
 		ln -s $dir/$file ~/.config/zathura/zathurarc
