@@ -8,8 +8,9 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc bash_aliases inputrc emacs vimrc vim rootalias rootrc tmux.conf tmux.conf.local"    # list of files/folders to symlink in homedir
 
+# list of files/folders to symlink in homedir
+files="bashrc bash_aliases inputrc emacs vimrc vim rootalias rootrc tmux.conf tmux.conf.local zathurarc"
 ##########
 
 # create dotfiles_old in homedir
@@ -22,12 +23,20 @@ echo -n "Changing to the $dir directory ..."
 cd $dir
 echo "done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+# move any existing dotfiles in homedir to dotfiles_old directory,
+# then create symlinks from the homedir to any files in the ~/dotfiles
+# directory specified in $files
+echo "Moving any existing dotfiles to $olddir"
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file $olddir
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+    if [ "$file" == "zathurarc" ]; then
+		mv -v ~/.config/zathura/zathurarc $olddir
+		echo "Creating symlink to $file in home directory."
+		ln -s $dir/$file ~/.config/zathura/zathurarc
+	else
+		mv -v ~/.$file $olddir
+		echo "Creating symlink to $file in home directory."
+		ln -s $dir/$file ~/.$file
+	fi
 done
 
 echo "Moving 'mimeapps.list' from '~/.config/' to $olddir"
