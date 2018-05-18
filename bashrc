@@ -180,6 +180,28 @@ if [ "$HOSTNAME" == "sebSMI" ]; then
   # host-specific aliases
   alias tfenv='source $HOME/envs/tfenv/bin/activate' # activate tensorflow environment
 
+elif [ "$HOSTNAME" == "pc-templ" ]; then
+
+
+  if [ "$color_prompt" = yes ]; then
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;220m\]  »\[\033[00m\] '
+  else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+  fi
+  unset color_prompt force_color_prompt
+
+  # source oh-my-git (https://github.com/arialdomartini/oh-my-git)
+  source $HOME/programs/oh-my-git/prompt.sh
+    
+  alias root='root -l'
+
+  # load thefuck:
+  eval $(thefuck --alias)
+
+  # bash-insulter (github.com/hkbakke/bash-insulter)
+  . /etc/bash.command-not-found
+    
 elif [ "$HOSTNAME" == "smilx0.smi.oeaw.ac.at" ] || [ "$HOSTNAME" == "smilx1" ]; then
   if [ "$color_prompt" = yes ]; then
     PS1=' \[\033[01;30m\](\D{%T}) \[\033[01;33m\]\u@\h\[\033[01;34m\]:\w \n\[\033[01;30m\]   ↳\[\033[00m\] '
