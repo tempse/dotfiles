@@ -201,6 +201,9 @@ elif [ "$HOSTNAME" == "pc-templ" ]; then
 
   # bash-insulter (github.com/hkbakke/bash-insulter)
   . /etc/bash.command-not-found
+
+  # dircolors from https://github.com/seebi/dircolors-solarized
+  eval `dircolors $HOME/.dir_colors/dircolors`
     
 elif [ "$HOSTNAME" == "smilx0.smi.oeaw.ac.at" ] || [ "$HOSTNAME" == "smilx1" ]; then
   if [ "$color_prompt" = yes ]; then
