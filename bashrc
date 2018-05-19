@@ -250,6 +250,10 @@ elif [ "$HOSTNAME" == "sebPC" ]; then
   # source oh-my-git (https://github.com/arialdomartini/oh-my-git)
   source $HOME/programs/oh-my-git/prompt.sh
 
+  # dircolors from https://github.com/seebi/dircolors-solarized
+  eval `dircolors $HOME/.dir_colors/dircolors`
+
+
   alias root='root -l'
 
 elif [ "$HOSTNAME" == "smiRR-GPU" ]; then
