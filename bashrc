@@ -182,7 +182,6 @@ if [ "$HOSTNAME" == "sebSMI" ]; then
 
 elif [ "$HOSTNAME" == "pc-templ" ]; then
 
-
   if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;220m\]  »\[\033[00m\] '
@@ -194,6 +193,8 @@ elif [ "$HOSTNAME" == "pc-templ" ]; then
   # source oh-my-git (https://github.com/arialdomartini/oh-my-git)
   source $HOME/programs/oh-my-git/prompt.sh
     
+  # source and alias ROOT
+  . $HOME/programs/root_v6.13.02/bin/thisroot.sh
   alias root='root -l'
 
   # load thefuck:
