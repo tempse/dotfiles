@@ -10,7 +10,7 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 
 # list of files/folders to symlink in homedir
-files="bashrc bash_aliases inputrc emacs vimrc vim rootalias rootrc tmux.conf tmux.conf.local zathurarc"
+files="bashrc bash_aliases inputrc emacs vimrc vim rootalias rootrc ssh_config tmux.conf tmux.conf.local zathurarc"
 ##########
 
 # create dotfiles_old in homedir
@@ -32,6 +32,10 @@ for file in $files; do
 		mv -v ~/.config/zathura/zathurarc $olddir
 		echo "Creating symlink to $file in home directory."
 		ln -s $dir/$file ~/.config/zathura/zathurarc
+	elif [ "$file" == "ssh_config" ]; then
+		mv -v ~/.ssh/config $olddir
+		echo "Creating symlink to $file in home directory."
+		ln -s $dir/$file ~/.ssh/config
 	else
 		mv -v ~/.$file $olddir
 		echo "Creating symlink to $file in home directory."
