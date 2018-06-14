@@ -144,7 +144,7 @@ if [ -f $HOME/.hub/etc/hub.bash_completion.sh ]; then
 fi
 
 
-if [ "$HOSTNAME" == "sebSMI" ]; then
+if [ "$HOSTNAME" == "HEPseb" ]; then
 
 
   if [ "$color_prompt" = yes ]; then
@@ -160,25 +160,12 @@ if [ "$HOSTNAME" == "sebSMI" ]; then
     
   alias root='root -l'
 
-  # load alienv:
-  export ALICE_WORK_DIR=$HOME/alice/sw
-  eval "`alienv shell-helper`"
-  alias alio='alienv enter AliPhysics/latest-ali-master-release'
-
   # load thefuck:
   eval $(thefuck --alias)
 
   # bash-insulter (github.com/hkbakke/bash-insulter)
   . /etc/bash.command-not-found
     
-  # source ROOT distribution:
-  . $HOME/programs/root/root_v6.12.04/bin/thisroot.sh
-
-  # added by Anaconda2 4.3.1 installer
-  export PATH="$HOME/programs/anaconda2/bin:$PATH"
-
-  # host-specific aliases
-  alias tfenv='source $HOME/envs/tfenv/bin/activate' # activate tensorflow environment
 
 elif [ "$HOSTNAME" == "pc-templ" ]; then
 
@@ -289,3 +276,5 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
     
 # echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # | grep '(1)'
+export MPW_FULLNAME=Sebastian\ Templ
+export MPW_ASKPASS=\ 
