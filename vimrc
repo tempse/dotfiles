@@ -128,9 +128,9 @@ noremap <C-l> <C-W><C-l>
 "Number current line, and use relative number lines elsewhere
 set nu
 set rnu
-"Show existing tab with 2 spaces width
+"Show existing tab with 4 spaces width
 set tabstop=4
-"When indenting with '>', use 2 spaces width
+"When indenting with '>', use 4 spaces width
 set shiftwidth=4
 "How many spaces are used in insert mode
 set softtabstop=4
@@ -233,6 +233,7 @@ let g:rainbow_active = 1
 "Decrease time between updates (done for GitGutter) (default 4000, i.e. 4 seconds)
 set updatetime=1000
 "let g:gitgutter_highlight_lines=1
+let g:gitgutter_max_signs=9999
 
 """ Livedown
 " should markdown preview get shown automatically upon opening markdown buffer
