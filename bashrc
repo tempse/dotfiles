@@ -144,7 +144,7 @@ if [ -f $HOME/.hub/etc/hub.bash_completion.sh ]; then
 fi
 
 
-if [ "$HOSTNAME" == "HEPseb" ]; then
+if [ "$HOSTNAME" == "hepseb" ]; then
 
 
   if [ "$color_prompt" = yes ]; then
@@ -165,6 +165,9 @@ if [ "$HOSTNAME" == "HEPseb" ]; then
 
   # bash-insulter (github.com/hkbakke/bash-insulter)
   . /etc/bash.command-not-found
+
+  # source (awesome terminal) fonts
+  source $HOME/.fonts/*.sh
     
 
 elif [ "$HOSTNAME" == "pc-templ" ]; then
@@ -276,5 +279,3 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
     
 # echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # | grep '(1)'
-export MPW_FULLNAME=Sebastian\ Templ
-export MPW_ASKPASS=\ 
