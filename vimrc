@@ -44,6 +44,9 @@ set lazyredraw
 set splitright
 set splitbelow
 
+"Disable conceal feature, thus not altering the LaTeX equation input
+let g:tex_conceal = ""
+
 "Enable simple copy/pasting from visual mode (when using vim GUI)
 set guioptions+=Autoselect
 
