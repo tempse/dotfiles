@@ -143,10 +143,12 @@ set autoindent
 set breakindent
 "Show lnewrapping by indicating \\ for wrapped line
 set showbreak=\\\\\
-set textwidth =80
+" set textwidth=80
+"Show vertical indicator at a textwidth of 80
+set colorcolumn=80
 set fileformat=unix
 "Underline the current line
-"set cursorline
+set cursorline
 "Disable comment autowrapping, auto insertion of comment leader
 autocmd FileType * set formatoptions -=cro
 
