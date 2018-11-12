@@ -1,5 +1,7 @@
 # Aliases/exports common to all machines
 
+alias holdmybeer='sudo'
+
 ## FILE/FOLDER OPERATIONS
 
 alias ..='cd ..'
