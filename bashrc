@@ -147,7 +147,7 @@ fi
 if [ "$HOSTNAME" == "hepseb" ]; then
 
 
-  if [ "$color_prompt" = yes ]; then
+  if [ "$color_prompt" == "yes" ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;220m\]  »\[\033[00m\] '
   else
@@ -169,6 +169,18 @@ if [ "$HOSTNAME" == "hepseb" ]; then
   # source (awesome terminal) fonts
   source $HOME/.fonts/*.sh
     
+elif [[ "$HOSTNAME" == *"lxplus"* ]]; then
+
+  if [ "$color_prompt" == "yes" ]; then
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;220m\]  »\[\033[00m\] '
+  else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+  fi
+  unset color_prompt force_color_prompt
+
+  alias root='root -l'
+
 
 elif [ "$HOSTNAME" == "pc-templ" ]; then
 
