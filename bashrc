@@ -173,7 +173,7 @@ elif [[ "$HOSTNAME" == *"lxplus"* ]]; then
 
   if [ "$color_prompt" == "yes" ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;220m\]  »\[\033[00m\] '
+    PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;34m\]  »\[\033[00m\] '
   else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
   fi
@@ -208,21 +208,6 @@ elif [ "$HOSTNAME" == "pc-templ" ]; then
   # dircolors from https://github.com/seebi/dircolors-solarized
   eval `dircolors $HOME/.dir_colors/dircolors`
     
-elif [ "$HOSTNAME" == "smilx0.smi.oeaw.ac.at" ] || [ "$HOSTNAME" == "smilx1" ]; then
-  if [ "$color_prompt" = yes ]; then
-    PS1=' \[\033[01;30m\](\D{%T}) \[\033[01;33m\]\u@\h\[\033[01;34m\]:\w \n\[\033[01;30m\]   ↳\[\033[00m\] '
-  else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-  fi
-  unset color_prompt force_color_prompt
-
-  # added by Anaconda2 4.3.1 installer
-  export PATH="$HOME/programs/anaconda2/bin:$PATH"
-
-  # source ROOT:
-  . $HOME/programs/root_v6.09.02/bin/thisroot.sh
-
-  alias root='root -l'
 
 elif [ "$HOSTNAME" == "sebPC" ]; then
 
@@ -259,24 +244,6 @@ elif [ "$HOSTNAME" == "sebPC" ]; then
 
   alias root='root -l'
 
-elif [ "$HOSTNAME" == "smiRR-GPU" ]; then
-  if [ "$color_prompt" = yes ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1=' \[\033[01;30m\](\D{%T}) \[\033[01;33m\]\u@\h\[\033[01;34m\]:\w \[\033[01;30m\]$(__git_ps1)\[\033[01;34m\] \[\033[00m\] \n\[\033[01;30m\]   ↳\[\033[00m\] '
-  else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-  fi
-  unset color_prompt force_color_prompt
-
-  # added by Anaconda2 4.4.0 installer
-  export PATH="$HOME/programs/anaconda2/bin:$PATH"
-
-  # CUDA exports
-  export PATH=/usr/local/cuda/bin:$PATH
-  export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-
-  alias root='root -l'
-
 fi
 
 
@@ -290,4 +257,4 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
     
-# echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # | grep '(1)'
+echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # | grep '(1)'
