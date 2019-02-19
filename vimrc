@@ -229,6 +229,7 @@ Plug 'shime/vim-livedown'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
+Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 """ rainbow
@@ -270,6 +271,12 @@ let g:syntastic_check_on_wq = 0
 
 """ IndentLine
 let g:indentLine_setColors = 0
+
+""" highlightedyank
+if !exists('##TextYankPost')
+	map y <Plug>(highlightedyank)
+endif
+let g:highlightedyank_highlight_duration = 1500
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
