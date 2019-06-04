@@ -45,6 +45,9 @@ alias JUPYTER2SLIDES='ipython nbconvert --to slides'
 alias JUPYTER2MD='ipython nbconvert --to markdown'
 alias JUPYTER2SCRIPT='ipython nbconvert --to script'
 
+# convert PDF to PNG, using some standard parameters (requires imagemagick)
+alias CONVERTPDF='convert -trim -quality 100 -density 300 -resize 1000x '
+
 
 ## GENERAL LINUX
 
