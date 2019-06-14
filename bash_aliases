@@ -34,6 +34,8 @@ alias edit='$EDITOR'
 alias o='xdg-open'
 alias enw='emacs -nw'
 
+alias vi='vim'
+
 # convert markdown to LaTeX. Use like 'MD2TEX output.tex input.md'.
 alias MD2TEX='pandoc -s -S -f markdown -t latex -o'
 
