@@ -181,6 +181,11 @@ elif [[ "$HOSTNAME" == *"lxplus"* ]]; then
 
   alias root='root -l'
 
+  set_condor_sched() {
+    export _condor_CREDD_HOST="bigbird${1}.cern.ch"
+    export _condor_SCHEDD_HOST="bigbird${1}.cern.ch"
+  }
+
 
 elif [ "$HOSTNAME" == "pc-templ" ]; then
 
