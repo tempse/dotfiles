@@ -34,6 +34,8 @@ alias edit='$EDITOR'
 alias o='xdg-open'
 alias enw='emacs -nw'
 
+alias vi='vim'
+
 # convert markdown to LaTeX. Use like 'MD2TEX output.tex input.md'.
 alias MD2TEX='pandoc -s -S -f markdown -t latex -o'
 
@@ -44,6 +46,9 @@ alias JUPYTER2HTML='ipython nbconvert --to html'
 alias JUPYTER2SLIDES='ipython nbconvert --to slides'
 alias JUPYTER2MD='ipython nbconvert --to markdown'
 alias JUPYTER2SCRIPT='ipython nbconvert --to script'
+
+# convert PDF to PNG, using some standard parameters (requires imagemagick)
+alias CONVERTPDF='convert -trim -quality 100 -density 300 -resize 1000x '
 
 
 ## GENERAL LINUX
