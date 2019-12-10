@@ -145,7 +145,7 @@ set breakindent
 set showbreak=\\\\\
 " set textwidth=80
 "Show vertical indicator at a textwidth of 80
-set colorcolumn=80
+set colorcolumn=88
 set fileformat=unix
 "Underline the current line
 set cursorline

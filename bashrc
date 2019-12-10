@@ -266,6 +266,3 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
     
 # echo "Did you know that:"; whatis $(ls /bin | shuf -n 1) # | grep '(1)'
-
-# display a silly joke (requires pyjokes to be installed)
-pyjoke -c all
