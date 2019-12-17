@@ -203,10 +203,6 @@ elif [ "$HOSTNAME" == "pc-templ" ]; then
   # source oh-my-git (https://github.com/arialdomartini/oh-my-git)
   source $HOME/programs/oh-my-git/prompt.sh
     
-  # source and alias ROOT
-  . $HOME/programs/root_v6.13.02/bin/thisroot.sh
-  alias root='root -l'
-
   # load thefuck:
   eval $(thefuck --alias)
 
