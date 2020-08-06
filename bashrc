@@ -17,6 +17,10 @@ fi
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
+# disable XON/XOFF feature so that Ctrl+S can be used for cycling through
+# reverse-i-search (invoked by Ctrl+R)
+stty -ixon
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
