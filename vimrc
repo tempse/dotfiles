@@ -28,10 +28,10 @@ endif
 "Detect filetype
 filetype on
 
-"Quick acces to vimrc
-nnoremap <F5> :e $MYVIMRC<CR>
 "Reload vimrc
-nnoremap <F6> :so $MYVIMRC<CR>
+nnoremap <F5> :so $MYVIMRC<CR>
+"Quick acces to vimrc
+nnoremap <F6> :e $MYVIMRC<CR>
 
 "Exit insert mode from homerow
 inoremap jk <Esc>
@@ -112,14 +112,12 @@ nnoremap L $
 "inoremap <Down> <nop>
 
 "Shortcuts to switch through buffers with ctrl
-noremap <C-J> :bnext<CR>
-noremap <C-K> :bprev<CR>
-
-"Shortcuts to switch through errors (displayed by Syntastic)
-nnoremap <C-PageDown> :lnext<CR>
-nnoremap <C-PageUp> :lprev<CR>
+noremap <C-n> :bnext<CR>
+noremap <C-m> :bprev<CR>
 
 ""Switch between open windows
+noremap <C-j> <C-W><C-j>
+noremap <C-k> <C-W><C-k>
 noremap <C-h> <C-W><C-h>
 noremap <C-l> <C-W><C-l>
 
@@ -133,6 +131,8 @@ set nu
 set rnu
 "Show existing tab with 4 spaces width
 set tabstop=4
+"Convert tabs to spaces
+set expandtab
 "When indenting with '>', use 4 spaces width
 set shiftwidth=4
 "How many spaces are used in insert mode
@@ -140,7 +140,7 @@ set softtabstop=4
 "Maintain indent from current line to next line
 set autoindent
 "Wrapped lines follow indentation
-set breakindent
+" set breakindent
 "Show lnewrapping by indicating \\ for wrapped line
 set showbreak=\\\\\
 " set textwidth=80
@@ -223,11 +223,9 @@ Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'luochen1990/rainbow'
-" Plug 'Valloric/YouCompleteMe' "needs to be compiled!
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'shime/vim-livedown'
 Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'machakann/vim-highlightedyank'
 call plug#end()
@@ -258,16 +256,6 @@ map <SPACE>b <Plug>(easymotion-b)
 map <SPACE>s <Plug>(easymotion-s2)
 map <SPACE>j <Plug>(easymotion-j)
 map <SPACE>k <Plug>(easymotion-k)
-
-""" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 """ IndentLine
 let g:indentLine_setColors = 0
