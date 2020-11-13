@@ -57,7 +57,6 @@ alias bashsource='source $HOME/.bashrc'
 alias bashedit='emacs $HOME/dotfiles/bashrc &'
 alias UPDATE='sudo apt update && sudo apt upgrade'
 alias sudo='sudo ' # Enable aliases to be sudo'ed
-alias cat='pygmentize -O style=monokai -f console256 -g' # cat with beautiful colors. requires: 'pip install Pygments'
 alias q='exit'
 
 

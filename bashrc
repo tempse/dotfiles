@@ -193,6 +193,20 @@ elif [[ "$HOSTNAME" == *"lxplus"* ]]; then
     export _condor_SCHEDD_HOST="bigbird${1}.cern.ch"
   }
 
+elif [[ "$HOSTNAME" == *"clip"* ]]; then
+
+  if [ "$color_prompt" == "yes" ]; then
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;34m\]  »\[\033[00m\] '
+    PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;32m\]  >\[\033[00m\] '
+  else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+  fi
+  unset color_prompt force_color_prompt
+
+  source /cvmfs/cms.cern.ch/cmsset_default.sh
+
+  alias root='root -l'
 
 elif [ "$HOSTNAME" == "pc-templ" ]; then
 
