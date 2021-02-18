@@ -18,7 +18,7 @@ alias md='mkdir -p'
 # Use \rm or 'rm' (with quotation marks) to circumvent this alias.
 alias rm='echo "This is not the command you are looking for. Use trash-put instead."; false'
     
-alias CP='rsync -ah --progress'
+alias CP='rsync -ah --progress --stats'
 alias RMTEMP='\rm -v *~ .*~'
 
 alias NUMFILES='find . -type f | wc -l' # return number of files in current folder
