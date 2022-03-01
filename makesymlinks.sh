@@ -43,8 +43,8 @@ for file in $files; do
 	fi
 done
 
-echo "Moving 'mimeapps.list' from '~/.config/' to $olddir"
-mv ~/.config/mimeapps.list $olddir
-echo "Creating symlink to 'mimeapps.list' in '~/.config/'"
-ln -s $dir/mimeapps.list ~/.config/mimeapps.list
+#echo "Moving 'mimeapps.list' from '~/.config/' to $olddir"
+#mv ~/.config/mimeapps.list $olddir
+#echo "Creating symlink to 'mimeapps.list' in '~/.config/'"
+#ln -s $dir/mimeapps.list ~/.config/mimeapps.list
 

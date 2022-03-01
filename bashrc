@@ -148,7 +148,7 @@ if [ -f $HOME/.hub/etc/hub.bash_completion.sh ]; then
 fi
 
 
-if [ "$HOSTNAME" == "hepseb" ]; then
+if [ "$HOSTNAME" == "sebtop" ]; then
 
 
   if [ "$color_prompt" == "yes" ]; then
@@ -161,8 +161,6 @@ if [ "$HOSTNAME" == "hepseb" ]; then
 
   # source oh-my-git (https://github.com/arialdomartini/oh-my-git)
   source $HOME/programs/oh-my-git/prompt.sh
-    
-  alias root='root -l'
 
   # load thefuck:
   eval $(thefuck --alias)
@@ -173,64 +171,6 @@ if [ "$HOSTNAME" == "hepseb" ]; then
   # source (awesome terminal) fonts
   source $HOME/.fonts/*.sh
     
-elif [[ "$HOSTNAME" == *"lxplus"* ]]; then
-
-  if [ "$color_prompt" == "yes" ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    # PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;34m\]  »\[\033[00m\] '
-    PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;34m\]  >\[\033[00m\] '
-  else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-  fi
-  unset color_prompt force_color_prompt
-
-  eval `dircolors $HOME/.dir_colors/dircolors`
-
-  alias root='root -l'
-
-  set_condor_sched() {
-    export _condor_CREDD_HOST="bigbird${1}.cern.ch"
-    export _condor_SCHEDD_HOST="bigbird${1}.cern.ch"
-  }
-
-elif [[ "$HOSTNAME" == *"clip"* ]]; then
-
-  if [ "$color_prompt" == "yes" ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    # PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;34m\]  »\[\033[00m\] '
-    PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;32m\]  >\[\033[00m\] '
-  else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-  fi
-  unset color_prompt force_color_prompt
-
-  source /cvmfs/cms.cern.ch/cmsset_default.sh
-
-  alias root='root -l'
-
-elif [ "$HOSTNAME" == "pc-templ" ]; then
-
-  if [ "$color_prompt" = yes ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1=' \[\033[38;5;243m\](\D{%T}) \[\033[38;5;247m\]\u@\h\[\033[38;5;255m\]:\w \n\[\033[38;5;220m\]  »\[\033[00m\] '
-  else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-  fi
-  unset color_prompt force_color_prompt
-
-  # source oh-my-git (https://github.com/arialdomartini/oh-my-git)
-  source $HOME/programs/oh-my-git/prompt.sh
-    
-  # load thefuck:
-  eval $(thefuck --alias)
-
-  # bash-insulter (github.com/hkbakke/bash-insulter)
-  . /etc/bash.command-not-found
-
-  # dircolors from https://github.com/seebi/dircolors-solarized
-  eval `dircolors $HOME/.dir_colors/dircolors`
-    
-
 elif [ "$HOSTNAME" == "sebPC" ]; then
 
   if [ "$color_prompt" = yes ]; then

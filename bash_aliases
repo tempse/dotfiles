@@ -9,15 +9,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
-alias cdd='cd $DATA'
-alias cdc='cd $CODE'
-
 alias md='mkdir -p'
 
-# suggest to use trash-cli instead of normal 'rm' command.
-# Use \rm or 'rm' (with quotation marks) to circumvent this alias.
-alias rm='echo "This is not the command you are looking for. Use trash-put instead."; false'
-    
 alias CP='rsync -ah --progress --stats'
 alias RMTEMP='\rm -v *~ .*~'
 
@@ -28,13 +21,13 @@ alias FINDFILE='find $PWD -type f -name' # usage example: 'FINDFILE "file.txt"'
 
 ## APPLICATIONS
 
-export EDITOR='emacs'
-
-alias edit='$EDITOR'
-alias o='xdg-open'
-alias enw='emacs -nw'
-
 alias vi='vim'
+
+export EDITOR='vim'
+alias edit='$EDITOR'
+
+alias o='xdg-open'
+
 
 # convert markdown to LaTeX. Use like 'MD2TEX output.tex input.md'.
 alias MD2TEX='pandoc -s -S -f markdown -t latex -o'
@@ -54,9 +47,9 @@ alias CONVERTPDF='convert -trim -quality 100 -density 300 -resize 1000x '
 ## GENERAL LINUX
 
 alias bashsource='source $HOME/.bashrc'
-alias bashedit='emacs $HOME/dotfiles/bashrc &'
+alias bashedit='vim $HOME/dotfiles/bashrc &'
 alias UPDATE='sudo apt update && sudo apt upgrade'
-alias sudo='sudo ' # Enable aliases to be sudo'ed
+alias sudo='sudo ' # allow aliases to be sudo'ed
 alias q='exit'
 
 
