@@ -1,0 +1,74 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"0. General options                                    "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Exit insert mode from homerow
+inoremap jk <Esc>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"1. Mouse and clipboard settings                       "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"2. Movement keys                                      "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Allow single j and k movements to treat wrapped lines separately.
+""Strict linewise movement resumed when preceeded with a count.
+" nnoremap <expr> j v:count ? 'j' : 'gj'
+" nnoremap <expr> k v:count ? 'k' : 'gk'
+
+
+"Remap H and L to SOF and EOL
+nnoremap H ^
+nnoremap L $
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"3. Formatting options                                 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"4. Search options                                     "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Set ignore case
+set ic
+
+"Highlight all matches when searching
+set hlsearch
+nnoremap <leader><space> :nohlsearch<CR>
+
+"Search as characters are entered
+set incsearch
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"5. Statusline modifications                           "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"6. Plugins                                            "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""" EasyMotion
+" let g:EasyMotion_override_acejump = 0
+let mapleader="<SPACE>"
+set easymotion
+let g:EasyMotion_do_mapping = 0
+map <SPACE>w <Plug>(easymotion-w)
+map <SPACE>b <Plug>(easymotion-b)
+map <SPACE>s <Plug>(easymotion-s2)
+map <SPACE>j <Plug>(easymotion-j)
+map <SPACE>k <Plug>(easymotion-k)
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"7. Functions                                          "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
