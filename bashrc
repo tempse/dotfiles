@@ -208,6 +208,9 @@ elif [ "$HOSTNAME" == "sebPC" ]; then
 
 fi
 
+# source z (https://github.com/rupa/z)
+source $HOME/.z.sh
+
 
 #Colourised Man page
 export LESS_TERMCAP_mb=$'\E[01;34m'
